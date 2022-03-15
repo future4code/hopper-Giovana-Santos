@@ -1,0 +1,24 @@
+        ------- 7 Passos Fundamentais ---------
+
+1-) Ter atenção no enunciado
+Pois através dele que iremos tirar as informaões unicas que farão a diferença para começar a execução de tarefa.
+
+2-)retire informaões relevantes 
+A partir dai encontraremos a palavras chaves para dar inicio ao ponto de partida
+da tarefa.
+
+3-) Pensar em entradas e saidas
+sempre bom ter uma estrategia para as informações serem mais precisas e organizadas
+sequência que são solicitadas.
+
+4-)Fazer um esquema Visual
+Para ter uma noção basica de como deve ficar fazer esquemas visual, para então saber como estruturar o código, sem antes codar de fato;
+
+5-)Criar codigo feio 
+criar codigo feio para saber qual a sua real funcionalidade e ter uma base de organização dos codigos.
+
+6-)Testar força bruta
+colocar os codigos na liguagem de programação desejada, depois ir testando para ver se funciona.
+
+7-)Refatorar
+depois de testar o codigo feio, devemos agora tranformar em um codigo aprensentavel.
