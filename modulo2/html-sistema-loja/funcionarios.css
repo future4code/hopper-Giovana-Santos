@@ -1,0 +1,19 @@
+p{
+    color: deeppink;
+}
+body{
+    width: 100%;
+    height: 622px;
+    position: relative;
+    background-image: url(./IMG/equipe.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+ h2{
+     color:black
+ }
+
+li{
+    color:rgb(0, 17, 255);
+    font-size: 16pt;
+}

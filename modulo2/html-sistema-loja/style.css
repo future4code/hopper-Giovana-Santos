@@ -1,0 +1,23 @@
+h1{
+    color: deeppink;
+}
+body{
+    width: 100%;
+    height: 628px;
+    position: relative;
+    background-image: url(./IMG/floresta.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    
+
+}
+div {
+    color:azure;
+}
+
+p {
+    font-size: 15px;
+
+}
+
+    
