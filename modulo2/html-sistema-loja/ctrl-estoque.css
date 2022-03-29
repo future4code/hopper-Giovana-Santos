@@ -1,0 +1,16 @@
+h2{
+    color:deeppink;
+}
+p{
+    color: deeppink;
+}
+body{
+width: 100%;
+    height: 1200px;
+    position: relative;
+    background-image: url(./IMG/ctrl-estoque-fundo.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    
+}
+ 
