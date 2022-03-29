@@ -105,12 +105,17 @@ table {
     text-align: center;
 }
 
+table img{
+    max-width:50px;
+}
+
 td button {
     background-color: #fadf63;
     width: 150px;
     height: 30px;
     border-radius: 5px;
     color: black;
+
 }
 
 .container-do-search {
