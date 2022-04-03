@@ -1,0 +1,63 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#perfil{
+    background-image: url(./img-port/programador.webp);
+      height: 657px;
+      background-position: right center;
+      background-size: cover;
+}
+header{
+    grid-area: cabecalho;
+    background-color:black ;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+.logo{
+    max-width: 120px;
+}
+nav ul{
+    text-align: right;
+    margin-left: 1000px;
+}
+nav li{
+    display: inline-block;
+    margin-right: 10px;
+}
+nav a{
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px #ddd;
+}
+main{
+    margin-left: 25px;
+}
+main p {
+   color: white;
+   font-size: 30px;
+}
+main h2{
+    margin-top: 15px;
+    color: white;
+    font-size: 40px;
+}
+main ul{
+    margin-top: 10px;
+    list-style: none;
+}
+main li{
+    color: white;
+    font-size: 30px;
+}
+a{
+    color: white;
+    font-size: 30px;
+}
+main a:hover{
+    background-color:white;
+    color: black;
+}

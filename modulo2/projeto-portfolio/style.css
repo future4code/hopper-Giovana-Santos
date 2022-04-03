@@ -4,12 +4,11 @@
 }
 #meu-portfolio{
     background-image: url(./img-port/computer-2982270_960_720.webp);
-      height: 720px;
+      height: 660px;
       background-position: right center;
       background-size: cover;
 }
 .ajuste{
-    
     max-width: 140px;
 }
 header{
