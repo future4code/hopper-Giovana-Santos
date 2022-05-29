@@ -132,14 +132,7 @@ class App extends React.Component {
       });
   };
   Retro = () => {
-    if (this.state.janela > 1) {
-      this.setState({ janela: this.state.janela - 1 });
-    }
-  };
-  Avanca = () => {
-    if (this.state.janela < 3) {
-      this.setState({ janela: this.state.janela + 1 });
-    }
+      this.setState({ janela: 1 });
   };
   trocarTela = () => {
     switch (this.state.janela) {
@@ -197,8 +190,7 @@ class App extends React.Component {
         <button onClick={this.criarPlaylist}>Criar</button>
         {this.trocarTela()}
         <div>
-          <button onClick={this.Retro}>retroceder</button>
-          <button onClick={this.Avanca}>avancar</button>
+          <button onClick={this.Retro}>Pagina Principal</button>
         </div>
       </Fundo>
     );

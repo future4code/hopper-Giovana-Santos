@@ -11,6 +11,7 @@ export default class Musica extends React.Component {
               <Music key={musica.id}>
                 <li>{musica.name}</li>
                 <li>{musica.artist}</li>
+                <li><iframe src={musica.url.replace("watch?v=", "embed/")} frameborder="0"></iframe></li>
                 <button onClick={() => this.props.removerMusica(musica.id)}>
                   Remover Música
                 </button>

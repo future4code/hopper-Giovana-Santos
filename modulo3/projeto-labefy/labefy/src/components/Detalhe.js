@@ -62,6 +62,7 @@ class Detalhe extends React.Component {
           placeholder="Digite a URL da música para ser tocada"
           onChange={this.onChangeUrl}
           value={this.state.url}
+          maxLength="43"
         />
         <div>
           <button onClick={this.novaMusica}>Adicionar a Playlist</button>
