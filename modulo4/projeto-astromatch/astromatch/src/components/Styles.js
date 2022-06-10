@@ -36,9 +36,15 @@ export const Container = styled.div`
 export const TelaInicial = styled.div`
   border: 1px solid black;
   background-color: white;
-  width: 50vw;
+  width: 30vw;
   height: 90vh;
   border-radius: 10px;
+
+  @media screen and (max-width: 400px){
+    width:100vw;
+    height:100vh;
+    border-radius:0;
+  }
 `;
 
 export const ContainerPerfil = styled.div`
@@ -46,8 +52,8 @@ export const ContainerPerfil = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  width: 50vw;
-  height: 90vh;
+  width: 100%;
+  height: 100%;
 `;
 
 export const Logo = styled.div`
@@ -59,19 +65,19 @@ export const Logo = styled.div`
   gap:3vw;
   img:nth-child(1) {
     cursor: pointer;
-    /* padding: 1vh 4vh; */
-    width: 6vw;
+    width: 15%;
+    padding-left:5%;
     &:hover {
       animation: ${resetRotate} 0.5s ease-in-out both;
     }
   }
   img:nth-child(2) {
-    width: 20vw;
+    width: 50%;
     margin: 0 auto;
   }
   img:nth-child(3) {
-    /* padding: 1vh 4vh; */
-    width: 6vw;
+    width: 15%;
+    padding-right:5%;
     cursor: pointer;
   }
 `;
