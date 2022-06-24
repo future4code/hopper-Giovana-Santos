@@ -96,3 +96,43 @@ export const ContainerLTP = styled.div`
         }
     }
 `;
+
+export const ContainerLoginPage = styled.div`
+    background-color:pink;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    gap:1em;
+    img{
+        width:6em;
+        border-radius:50%;
+        transition:1s;
+        cursor: pointer;
+        &:hover{
+            transform:scale(1.2);
+        }
+    }
+    form{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        gap:1em;
+        input{
+            padding:1em;
+            width:20vw;
+            border:1px solid black;
+            border-radius:15px;
+        }
+        button{
+            width:7vw;
+            padding:0.5em;
+            border-radius:20px;
+            border:1px solid black;
+            background-color:#FFD9F5;
+        }
+    }
+`;
+

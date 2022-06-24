@@ -10,7 +10,7 @@ const HomePage = () => {
     <ContainerHomePage>
       <img src={Logo} alt=""/>
       <p onClick={() => navigate("/trips/list")}>Ver Viagens</p>
-      <p>Acesso Privado</p>
+      <p onClick={() => navigate("/admin/trips/list")}>Acesso Privado</p>
     </ContainerHomePage>
   </Container>
     

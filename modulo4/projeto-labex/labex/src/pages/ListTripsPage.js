@@ -22,7 +22,7 @@ const ListTripsPage = () => {
 
   return (
     <>
-      <Header/>
+      <Header voltar={"/"}/>
     <ContainerLTP>
       <h1>Viagens Disponíveis</h1>
       {trips && trips.map((trip) =>(
