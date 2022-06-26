@@ -3,6 +3,7 @@ import {useProtectedPage} from "../hooks/useProtectedPage"
 import useForm from "../hooks/useForm"
 import { ListaPlanetas } from "../services/ListaPlanetas"
 import axios from "axios";
+import { ContainerCreate } from "../components/Styles"
 
 const CreateTripPage = () => {
 
@@ -31,6 +32,7 @@ const CreateTripPage = () => {
     }
     axios.post("https://us-central1-labenu-apis.cloudfunctions.net/labeX/giovana-martinho-hopper/trips", body, headers)
     .then((response) => {
+      cleanFields()
       alert("Viagem Criada com Sucesso!")
     }).catch((error) => {alert(error.response.data.message)})
   }
@@ -38,6 +40,7 @@ const CreateTripPage = () => {
   return (
     <div>
       <Header voltar={"/admin/trips/list"}/>
+      <ContainerCreate>
       <h1>Crie sua Viagem</h1>
       <form onSubmit={createTrip}>
         <input 
@@ -75,6 +78,7 @@ const CreateTripPage = () => {
         />
         <button>Criar</button>
       </form>
+    </ContainerCreate>
     </div>
   )
 }

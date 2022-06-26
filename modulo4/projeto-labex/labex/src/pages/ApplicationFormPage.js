@@ -3,9 +3,10 @@ import useGetTrips from "../hooks/useGetTrips";
 import useForm from "../hooks/useForm";
 import { ListaPaises } from "../services/ListaPaises";
 import axios from "axios"
+import { ContainerApplication } from "../components/Styles"
 
 const ApplicationFormPage = () => {
-  const { trips, getTrips } = useGetTrips()
+  const { trips } = useGetTrips()
   const { form, onChange, cleanFields } = useForm({
     viagem:"",
     nome:"",
@@ -42,7 +43,7 @@ const ApplicationFormPage = () => {
   return (
     <div>
       <Header voltar={"/trips/list"}/>
-      <div>
+      <ContainerApplication>
         <h1>Inscreva-se para uma viagem</h1>
         <form onSubmit={applyToTrip}>
           <select name="viagem" onChange={onChange} value={form.viagem}>
@@ -87,7 +88,7 @@ const ApplicationFormPage = () => {
           </select>
           <button>Concluido</button>
         </form>
-      </div>
+      </ContainerApplication>
     </div>
   )
 }

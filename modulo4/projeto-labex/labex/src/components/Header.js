@@ -21,7 +21,7 @@ const Header = ({voltar}) => {
 
   return (
     <Cabecalho>
-        <img src={Logo} alt="Logotipo da pagina"/>
+        <img onClick={()=> navigate("/")} src={Logo} alt="Logotipo da pagina"/>
         <ul>
             {loginLogout()}
             <li onClick={() => navigate(voltar)}>Voltar</li>

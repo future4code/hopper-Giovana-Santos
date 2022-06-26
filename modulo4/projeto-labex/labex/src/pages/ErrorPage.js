@@ -1,8 +1,14 @@
-import React from 'react'
+import { useNavigate } from "react-router-dom"
+import { PageError } from "../components/Styles"
 
 const ErrorPage = () => {
+  const navigate = useNavigate()
+
   return (
-    <div>ErrorPage</div>
+    <PageError>
+      <p>Pagina não encontrada</p>
+      <button onClick={() => navigate("/")}>Voltar</button>
+    </PageError>
   )
 }
 

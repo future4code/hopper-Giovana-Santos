@@ -13,19 +13,16 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const Cabecalho = styled.div`
+    max-height:12vh;
     background-color:pink;
     padding: 0.5em 2em;
     display:flex;
     justify-content:space-between;
     align-items:center;
     img{
-        width:6vw;
+        width:15%;
         border-radius:50%;
-        transition:1s;
         cursor: pointer;
-        &:hover{
-            transform:scale(1.2);
-        }
     }
     ul{
         list-style:none;
@@ -177,5 +174,96 @@ export const ContainerAdm = styled.div`
             padding:2em 0;
             width:100%;
         }
+    }
+`;
+export const ContainerApplication = styled.div`
+    height:85vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:1em;
+    form{
+        width:35%;
+        display:flex;
+        flex-direction:column;
+        gap:0.5em;
+    }
+    h1{
+        text-align:center;
+    }
+    input, select{
+        padding:0.3em;
+        border-radius:5px;
+        border:1px solid pink;
+        cursor:pointer;
+    }
+    button{
+        width:40%;
+        background-color:pink;
+        margin:0 auto;
+        padding:0.5em;
+        border-radius:10px;
+        cursor:pointer;
+    }
+`;
+export const ContainerCreate = styled(ContainerApplication)``;
+
+export const ContainerDetails = styled.div`
+    width:100%;
+    min-height:85vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    h1{
+        color:#de3163;
+        text-align:center;
+        padding-bottom:1em;
+    }
+`;
+export const DetalhesTrips = styled.div`
+    border-bottom:1px solid black;
+    padding:1em;
+    margin-bottom:1em;
+    width:70%;
+    span{
+        color:#ff266a;
+    }
+
+`;
+export const PendentesTrips = styled(DetalhesTrips)`
+    button{
+        padding:0.5em;
+        border:none;
+        border-radius:10px;
+        &:nth-child(6){
+            background-color:#0f0;
+        }
+        &:nth-child(7){
+            background-color:#ff000e;
+        }
+    }
+`;
+export const PageError = styled.div`
+    width: 100%;
+    height: 100vh;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    p{
+        font-size:5em;
+        padding:1em;
+    }
+    button {
+        width:15%;
+        background-color:pink;
+        margin:0 auto;
+        padding:1.5em;
+        border-radius:10px;
+        cursor:pointer;
+        font-size:1em;
     }
 `;

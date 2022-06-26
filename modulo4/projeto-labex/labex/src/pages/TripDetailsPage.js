@@ -3,6 +3,7 @@ import { useProtectedPage } from "../hooks/useProtectedPage";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { ContainerDetails, DetalhesTrips, PendentesTrips } from "../components/Styles"
 
 const TripDetailsPage = () => {
   useProtectedPage()
@@ -49,30 +50,30 @@ const TripDetailsPage = () => {
   return (
     <div>
       <Header voltar="/admin/trips/list"/>
+      <ContainerDetails>
       {detalhes && (
-        <div>
-        <h1>{detalhes.name}</h1>
-        <p>Nome: {detalhes.name}</p>
-        <p>Descrição: {detalhes.description}</p>
-        <p>Planeta: {detalhes.planet}</p>
-        <p>Duração: {detalhes.durationInDays}</p>
-        <p>Data: {detalhes.date}</p>
-      </div>
+        <DetalhesTrips>
+          <h1>{detalhes.name}</h1>
+          <p><span>Nome: </span>{detalhes.name}</p>
+          <p><span>Descrição: </span>{detalhes.description}</p>
+          <p><span>Planeta: </span>{detalhes.planet}</p>
+          <p><span>Duração: </span>{detalhes.durationInDays}</p>
+          <p><span>Data: </span>{detalhes.date}</p>
+        </DetalhesTrips>
       )}
-      <div>
+      
         <h1>Pendentes</h1>
         {detalhes.candidates && detalhes.candidates.map((candidato) => (
-        <div key={candidato.id} >
-          <p>Nome: {candidato.name}</p>
-          <p>Profissão: {candidato.profession}</p>
-          <p>Idade: {candidato.age}</p>
-          <p>País: {candidato.country}</p>
-          <p>Texto de Candidatura: {candidato.applicationText}</p>
+        <PendentesTrips key={candidato.id} >
+          <p><span>Nome: </span>{candidato.name}</p>
+          <p><span>Profissão: </span>{candidato.profession}</p>
+          <p><span>Idade: </span>{candidato.age}</p>
+          <p><span>País: </span>{candidato.country}</p>
+          <p><span>Texto de Candidatura: </span>{candidato.applicationText}</p>
           <button onClick={() => getDecide(true,candidato.id)}>Aprovado</button>
           <button onClick={() => getDecide(false,candidato.id)}>Reprovado</button>
-        </div>
+        </PendentesTrips>
         ))}
-      </div>
       <div>
         <h1>Aprovados</h1>
         {detalhes.approved && detalhes.approved.map((aprovado) => (
@@ -81,6 +82,7 @@ const TripDetailsPage = () => {
         </div>
         ))}
       </div>
+      </ContainerDetails>
     </div>
   )
 }
