@@ -95,6 +95,12 @@ export const ContainerLTP = styled.div`
             font-weight:bold;
         }
     }
+    button{
+        margin:1.5em;
+        padding:0.5em;
+        border-radius:10px;
+        cursor:pointer;
+    }
 `;
 
 export const ContainerLoginPage = styled.div`
@@ -127,7 +133,7 @@ export const ContainerLoginPage = styled.div`
             border-radius:15px;
         }
         button{
-            width:7vw;
+            width:9vw;
             padding:0.5em;
             border-radius:20px;
             border:1px solid black;
@@ -135,4 +141,41 @@ export const ContainerLoginPage = styled.div`
         }
     }
 `;
-
+export const ContainerAdm = styled.div`
+    width:100%;
+    min-height:90vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    button{
+        margin:1.5em;
+        padding:0.5em;
+        border-radius:10px;
+        cursor:pointer;
+    }
+    div{
+        width:50%;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        margin-bottom:1em;
+        box-shadow:1px 1px 3px 1px #ccc;
+        padding:0 1.5em;
+        cursor: pointer;
+        transition:0.3s linear;
+        &:hover{
+            transform:scale(1.05);
+        }
+        img{
+            cursor: pointer;
+            width:2em;
+            background-color:pink;
+            border-radius:50%;
+        }
+        p{
+            padding:2em 0;
+            width:100%;
+        }
+    }
+`;

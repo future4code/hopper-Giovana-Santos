@@ -1,30 +1,19 @@
 import Header from "../components/Header";
-import axios from "axios";
-import { useState, useEffect } from "react"
 import { ContainerLTP } from "../components/Styles"
+import useGetTrips from "../hooks/useGetTrips";
+import { useNavigate } from "react-router-dom";
 
 const ListTripsPage = () => {
 
-  const [trips, setTrips] = useState([])
-
-  useEffect(() => {
-    getTrips()
-  },[])
-
-  const getTrips = () =>{
-    axios.get(`https://us-central1-labenu-apis.cloudfunctions.net/labeX/giovana-martinho-hopper/trips`)
-    .then((response) => {
-      setTrips(response.data.trips)
-    }).catch((error) => {
-      alert("Ocorreu erro")
-    })
-  } 
+  const navigate = useNavigate()
+  const { trips, getTrips } = useGetTrips()
 
   return (
     <>
       <Header voltar={"/"}/>
     <ContainerLTP>
       <h1>Viagens Disponíveis</h1>
+      <button type="button" onClick={() => navigate("/trips/application")}>Candidatar-se</button>
       {trips && trips.map((trip) =>(
         <section key={trip.id}>
           <p><span>Nome:</span> {trip.name}</p>
