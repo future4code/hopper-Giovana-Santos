@@ -57,12 +57,12 @@ app.get("/afazeres", (req:Request, res:Response) => {
 
 // Ex 5
 
-app.post("/afazeres", (req:Request, res:Response) => {
-  const {userId, id, title, completed} = req.body
-  if(!userId || !id || !title || !completed){
+app.post("/afazeres/criar", (req:Request, res:Response) => {
+  const {userId, title} = req.body
+  if(!userId || !title){
     res.status(400).send("Esta faltando um argumento a ser preenchido no body!")
   }
-  afazeres.push({ userId, id, title, completed})
+  afazeres.push({ userId, id:Date.now().toString(), title, completed: "false"})
   res.status(200).send(afazeres) 
 })
 
@@ -91,7 +91,7 @@ app.put("/afazeres/editar", (req: Request, res: Response) => {
 
 //Ex 7 
 
-app.delete("/afazeres",  (req: Request, res: Response) => {
+app.delete("/afazeres/deletar",  (req: Request, res: Response) => {
   const userId = req.query.userId
   const id = req.query.id
 
