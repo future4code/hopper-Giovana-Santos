@@ -1,0 +1,1 @@
+console.log("Para visualizar o resultado dos exercicios, mudar dentro do arquivo package.json a linha 8, substituindo o index.js pelo exercicio desejado!")
