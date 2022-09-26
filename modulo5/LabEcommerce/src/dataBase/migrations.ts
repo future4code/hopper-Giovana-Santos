@@ -19,23 +19,21 @@ const criarTabela = async () => {
 
       CREATE TABLE IF NOT EXISTS labecommerce_purchases(
         id VARCHAR(100) PRIMARY KEY,
-        user_id VARCHAR(100) PRIMARY KEY,
-        product_id VARCHAR(100) PRIMARY KEY,
+        user_id VARCHAR(100),
+        product_id VARCHAR(100),
         quantity INT NOT NULL,
         total_price DECIMAL(8, 2) NOT NULL,
-        FOREIGN KEY(user_id) REFERENCES labecommerce_users
-        FOREIGN KEY(product_id) REFERENCES labecommerce_products
-      )
-    `)
-    
+        FOREIGN KEY (user_id) REFERENCES labecommerce_users(id),
+        FOREIGN KEY (product_id) REFERENCES labecommerce_products(id)
+      );
+    `);
+    console.log("Tabelas criadas com sucesso.")
   } catch (error: any) {
-    console.log("Erro ao criar tabela.")
-    console.log(error.sqlMessage)
-  }
-}
+    console.log("Erro ao criar tabela.");
+    console.log(error.sqlMessage);
+  };
+};
 
-const criar = criarTabela()
-.then(() => console.log("Tabelas criadas com sucesso"))
-.finally(() => process.exit())
+const criar = criarTabela().finally(() => process.exit());
 
 export default criar;
