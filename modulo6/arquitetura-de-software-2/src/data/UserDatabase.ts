@@ -1,3 +1,4 @@
+import { User } from "../types/User";
 import { BaseDatabase } from "./BaseDatabase";
 
 export class UserDatabase extends BaseDatabase {
@@ -12,5 +13,12 @@ export class UserDatabase extends BaseDatabase {
         password,
       })
       .into(UserDatabase.TABLE_NAME);
+  }
+  async get():Promise<User[]> {
+    const result = await UserDatabase
+    .connection(UserDatabase.TABLE_NAME)
+    .select()
+    
+    return result
   }
 }
