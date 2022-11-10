@@ -1,0 +1,19 @@
+POST http://localhost:3003/users
+Content-Type: application/json
+
+{
+  "name" : "Marimarr auu",
+  "email" : "mari@email.com",
+  "password" : "oitudobem"
+}
+
+###
+POST http://localhost:3003/post
+Content-Type: application/json
+
+{
+  "photo" : "Eu em Paris",
+  "description" : "Bora tomar uma",
+  "type" : "event",
+  "authorId" : "0c7c8774-7d56-419d-a773-93ec0eaed4a3"
+}
