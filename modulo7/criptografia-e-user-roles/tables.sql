@@ -1,0 +1,8 @@
+-- Active: 1665791906308@@35.226.146.116@3306@Hopper-4314263-giovana-santos
+
+CREATE TABLE IF NOT EXISTS Auth_users (
+    id VARCHAR(64) PRIMARY KEY,
+    email VARCHAR(64) NOT NULL,
+    password VARCHAR(64) NOT NULL
+);
+
